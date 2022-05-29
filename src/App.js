@@ -84,10 +84,8 @@ class App extends React.Component {
 
     // currentTime = parse('14:35:34', TIME_FORMAT, currentTime);
 
-    if (isAfter(currentTime, parse('00:00:00', TIME_FORMAT, currentTime))
-        && isBefore(currentTime, parse('06:00:00', TIME_FORMAT, currentTime))) {
-      return <h1>Hyvää yötä!</h1>
-    }
+    const goodNight = isAfter(currentTime, parse('00:00:00', TIME_FORMAT, currentTime))
+        && isBefore(currentTime, parse('06:00:00', TIME_FORMAT, currentTime));
 
     const weekdayN = getDay(currentTime);
     const weekday = weekdays[weekdayN];
@@ -130,12 +128,17 @@ class App extends React.Component {
         <header className="App-header">
           <div>{format(currentTime, TIME_FORMAT)}</div>
 
-          {tasksToday.map(task => <Task task={task} currentTime={currentTime} />)}
+          {goodNight && <h1>Hyvää yötä!</h1>}
+          {!goodNight && (
+            <>
+              {tasksToday.map(task => <Task task={task} currentTime={currentTime} />)}
 
-          <div>
-            <h3>Vapaa aika:</h3>
-            <p>Aikaa jäljellä: <TimeFromSeconds timeSeconds={freeTime} /></p>
-          </div>
+              <div>
+                <h3>Vapaa aika:</h3>
+                <p>Aikaa jäljellä: <TimeFromSeconds timeSeconds={freeTime} /></p>
+              </div>
+            </>
+          )}
         </header>
       </div>
     );
