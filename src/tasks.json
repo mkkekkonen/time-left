@@ -1,0 +1,61 @@
+{
+  "Monday": [
+    {
+      "name": "Työt",
+      "due": "23:59:00",
+      "length": 8
+    }
+  ],
+  "Tuesday": [
+    {
+      "name": "Työt",
+      "due": "23:59:00",
+      "length": 8
+    }
+  ],
+  "Wednesday": [
+    {
+      "name": "Työt",
+      "due": "23:59:00",
+      "length": 8
+    },
+    {
+      "name": "Kokous",
+      "due": "20:30:00",
+      "length": 2.5
+    }
+  ],
+  "Thursday": [
+    {
+      "name": "Työt",
+      "due": "23:59:00",
+      "length": 8
+    }
+  ],
+  "Friday": [
+    {
+      "name": "Työt",
+      "due": "23:59:00",
+      "length": 8
+    }
+  ],
+  "Saturday": [
+    {
+      "name": "Työt",
+      "due": "23:59:00",
+      "length": 5
+    }
+  ],
+  "Sunday": [
+    {
+      "name": "Työt",
+      "due": "23:59:00",
+      "length": 5
+    },
+    {
+      "name": "Kokous",
+      "due": "19:00:00",
+      "length": 2
+    }
+  ]
+}
